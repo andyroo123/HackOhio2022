@@ -1,6 +1,6 @@
 # import the opencv library
 import cv2
-  
+# TRY using an OCR to get text from image
   
 # define a video capture object
 vid = cv2.VideoCapture(0)
