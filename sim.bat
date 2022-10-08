@@ -1,1 +1,1 @@
-python3 testing.py
+python3 getVideoInput.py
