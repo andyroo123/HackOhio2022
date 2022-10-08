@@ -1,1 +1,1 @@
-python3 handTracker.py
+python3 ./resources/handTracker.py
