@@ -1,7 +1,6 @@
 import cv2
 import mediapipe as mp
 from checkForQuitInput import checkForQuitInput
-
 from checkForSaveInput import checkForSaveInput
 
 cap = cv2.VideoCapture(0)
@@ -14,6 +13,9 @@ while True:
     imageRGB = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     results = hands.process(imageRGB)
 
+    # Get keyboard input
+    keyPressed = cv2.waitKey(1)
+
     # checking whether a hand is detected
     if results.multi_hand_landmarks:
         for handLms in results.multi_hand_landmarks: # working with each hand
@@ -25,6 +27,7 @@ while True:
 
             mpDraw.draw_landmarks(image, handLms, mpHands.HAND_CONNECTIONS)
         cv2.imshow("Output", image)
-        keyPressed = cv2.waitKey(1)
         checkForSaveInput(image, keyPressed) 
-        checkForQuitInput(cap, keyPressed)
+
+    # Check for quit input
+    checkForQuitInput(cap, keyPressed)
