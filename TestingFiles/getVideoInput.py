@@ -28,8 +28,6 @@ while True:
         img_resized = cv2.imwrite(filename='saved_img-final.jpg', img=img_)
         print("Image saved!")
 
-        GetHandFromPhoto()
-
     elif key == ord('q'):
         print("Turning off camera.")
         webcam.release()

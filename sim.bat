@@ -1,1 +1,1 @@
-python3 getVideoInput.py
+python3 handTracker.py
