@@ -1,6 +1,7 @@
 import csv
 import boto3
 
+#File to take in input from camera detection and compare it with the AWS database
 with open('credentials.csv', 'r') as input:
     next(input)
     reader = csv.reader(input)
