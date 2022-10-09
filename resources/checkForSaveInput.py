@@ -2,12 +2,17 @@ import cv2
 from moveFile import moveFile
 from uploadImages import uploadSavedImg
 from useModel import useModel
+import os
+import shutil
+
+index = 1
 
 def checkForSaveInput(image, key):
     if key == ord('s'):
         savePhoto(image)
 
 def savePhoto(image):
+    global index
     cv2.imwrite(filename='./photos/saved_img.jpg', img=image)
 
     print("Processing image...")
@@ -20,8 +25,12 @@ def savePhoto(image):
     print("Resized...")
     img_resized = cv2.imwrite(filename='./photos/saved_img-final.jpg', img=img_)
     print("Image saved!")
-    moveFile()
+    letter = 'M'
+    shutil.copy(".\photos\saved_img.jpg", ".\photos\databasePhotos\\" + letter)
+    os.rename(".\photos\databasePhotos\\" + letter + "\saved_img.jpg", ".\photos\databasePhotos\\" + letter + "\\" + letter + str(index) + ".jpg")
+    index = index + 1
+    #moveFile()
     print("Image Moved!")
     #uploadSavedImg()
-    #useModel('test-signlanguage-image-bucket', 'images/testImage0.jpg')
+    # useModel('test-signlanguage-image-bucket', 'images/testImage0.jpg')
     

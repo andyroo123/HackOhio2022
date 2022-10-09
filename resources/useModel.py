@@ -61,6 +61,8 @@ def show_custom_labels(model,bucket,photo, min_confidence):
     # display_image(bucket,photo,response)
     feedBack = getMaxConfidentResponse(response['CustomLabels'])
 
+    print(response)
+
     return feedBack
     #return len(response['CustomLabels'])
 
@@ -75,15 +77,15 @@ def getMaxConfidentResponse(responses):
 
 def getFeedBack(path):
     bucket='test-signlanguage-image-bucket'
-    model='arn:aws:rekognition:us-east-1:079644192492:project/SignLangaugeProject/version/SignLangaugeProject.2022-10-08T16.48.46/1665262126043'
+    model='arn:aws:rekognition:us-east-1:079644192492:project/SignLangaugeProject/version/SignLangaugeProject.2022-10-08T23.27.01/1665286021279'
     min_confidence=10
 
     label=show_custom_labels(model,bucket,path, min_confidence)
     return label
 
 def useModel(bucket, photo):
-    model='arn:aws:rekognition:us-east-1:079644192492:project/SignLangaugeProject/version/SignLangaugeProject.2022-10-08T16.48.46/1665262126043'
-    min_confidence=10
+    model='arn:aws:rekognition:us-east-1:079644192492:project/SignLangaugeProject/version/SignLangaugeProject.2022-10-08T23.27.01/1665286021279'
+    min_confidence=5
 
     label=show_custom_labels(model,bucket,photo, min_confidence)
     #print("Custom labels detected: " + str(label_count))
@@ -93,7 +95,7 @@ def main():
 
     bucket='test-signlanguage-image-bucket'
     photo='images/testImageA.jpg'
-    model='arn:aws:rekognition:us-east-1:079644192492:project/SignLangaugeProject/version/SignLangaugeProject.2022-10-08T16.48.46/1665262126043'
+    model='arn:aws:rekognition:us-east-1:079644192492:project/SignLangaugeProject/version/SignLangaugeProject.2022-10-08T23.27.01/1665286021279'
     min_confidence=10
 
     label=show_custom_labels(model,bucket,photo, min_confidence)

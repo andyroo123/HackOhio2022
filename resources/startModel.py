@@ -28,9 +28,9 @@ def start_model(project_arn, model_arn, version_name, min_inference_units):
     
 def main():
     project_arn='arn:aws:rekognition:us-east-1:079644192492:project/SignLangaugeProject/1665261900657'
-    model_arn='arn:aws:rekognition:us-east-1:079644192492:project/SignLangaugeProject/version/SignLangaugeProject.2022-10-08T16.48.46/1665262126043'
+    model_arn='arn:aws:rekognition:us-east-1:079644192492:project/SignLangaugeProject/version/SignLangaugeProject.2022-10-08T23.27.01/1665286021279'
     min_inference_units=1 
-    version_name='SignLangaugeProject.2022-10-08T16.48.46'
+    version_name='SignLangaugeProject.2022-10-08T23.27.01'
     start_model(project_arn, model_arn, version_name, min_inference_units)
 
 if __name__ == "__main__":

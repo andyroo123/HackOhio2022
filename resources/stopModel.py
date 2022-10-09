@@ -23,8 +23,8 @@ def stop_model(model_arn):
     
 def main():
     
-    model_arn='arn:aws:rekognition:us-east-1:079644192492:project/SignLangaugeProject/version/SignLangaugeProject.2022-10-08T16.48.46/1665262126043'
+    model_arn='arn:aws:rekognition:us-east-1:079644192492:project/SignLangaugeProject/version/SignLangaugeProject.2022-10-08T23.27.01/1665286021279'
     stop_model(model_arn)
 
 if __name__ == "__main__":
-    main() 
+    main()

@@ -6,6 +6,7 @@ pip install opencv-python
 pip3 install matplotlib
 pip install mediapipe
 pip install aws-shell
+pip install pyautogui
 aws configure (need access key)
 
 # AWS Commands
