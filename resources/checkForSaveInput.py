@@ -25,13 +25,12 @@ def savePhoto(image):
     print("Resized...")
     img_resized = cv2.imwrite(filename='./photos/saved_img-final.jpg', img=img_)
     print("Image saved!")
-    letter = 'T'
-    shutil.copy(".\photos\saved_img.jpg", ".\photos\databasePhotos\\" + letter)
-    os.rename(".\photos\databasePhotos\\" + letter + "\saved_img.jpg", ".\photos\databasePhotos\\" + letter + "\\" + letter + str(index) + ".jpg")
-    index = index + 1
+    #letter = 'K'
+    #shutil.copy(".\photos\saved_img.jpg", ".\photos\databasePhotos\\" + letter)
+    #os.rename(".\photos\databasePhotos\\" + letter + "\saved_img.jpg", ".\photos\databasePhotos\\" + letter + "\\" + letter + str(index) + ".jpg")
+    #index = index + 1
 
-
-    #moveFile()
+    moveFile()
     print("Image Moved!")
     #uploadSavedImg()
     # useModel('test-signlanguage-image-bucket', 'images/testImage0.jpg')
