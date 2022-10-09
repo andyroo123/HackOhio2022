@@ -1,5 +1,6 @@
 import cv2
 from moveFile import moveFile
+from uploadImages import uploadSavedImg
 
 def checkForSaveInput(image, key):
     if key == ord('s'):
@@ -20,3 +21,4 @@ def savePhoto(image):
     print("Image saved!")
     moveFile()
     print("Image Moved!")
+    uploadSavedImg()
