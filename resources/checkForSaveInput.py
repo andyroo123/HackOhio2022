@@ -22,6 +22,6 @@ def savePhoto(image):
     print("Image saved!")
     moveFile()
     print("Image Moved!")
-    uploadSavedImg()
-    useModel('test-signlanguage-image-bucket', 'images/testImage0.jpg')
+    #uploadSavedImg()
+    #useModel('test-signlanguage-image-bucket', 'images/testImage0.jpg')
     
