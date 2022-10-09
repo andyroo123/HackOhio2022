@@ -1,4 +1,5 @@
 import cv2
+from moveFile import moveFile
 
 def checkForSaveInput(image, key):
     if key == ord('s'):
@@ -17,3 +18,4 @@ def savePhoto(image):
     print("Resized...")
     img_resized = cv2.imwrite(filename='./photos/saved_img-final.jpg', img=img_)
     print("Image saved!")
+    moveFile()
