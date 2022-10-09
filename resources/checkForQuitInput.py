@@ -2,8 +2,10 @@ import cv2
 
 def checkForQuitInput(webcam, key):
     if key == ord('q'):
-        quitProgram(webcam)
+        quitProgram()
         webcam.release()
+        return True
+    return False
 
 def quitProgram():
     print("Turning off camera.")

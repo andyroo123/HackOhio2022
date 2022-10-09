@@ -2,12 +2,15 @@ import cv2
 import mediapipe as mp
 from checkForQuitInput import checkForQuitInput
 from checkForSaveInput import checkForSaveInput
+from outputText import killNotePad, startNotePad
 from uploadImages import uploadSavedImg
+from outputText import startNotePad
 
 cap = cv2.VideoCapture(0)
 mpHands = mp.solutions.hands
 hands = mpHands.Hands()
 mpDraw = mp.solutions.drawing_utils
+startNotePad()
 
 while True:
     success, image = cap.read()
@@ -31,4 +34,5 @@ while True:
         checkForSaveInput(image, keyPressed) 
 
     # Check for quit input
-    checkForQuitInput(cap, keyPressed)
+    if checkForQuitInput(cap, keyPressed):
+        killNotePad()
