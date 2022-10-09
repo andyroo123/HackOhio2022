@@ -1,6 +1,7 @@
 import cv2
 from moveFile import moveFile
 from uploadImages import uploadSavedImg
+from useModel import useModel
 
 def checkForSaveInput(image, key):
     if key == ord('s'):
@@ -22,3 +23,5 @@ def savePhoto(image):
     moveFile()
     print("Image Moved!")
     uploadSavedImg()
+    useModel('test-signlanguage-image-bucket', 'images/testImage0.jpg')
+    
