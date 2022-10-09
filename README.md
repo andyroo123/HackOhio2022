@@ -7,6 +7,8 @@ pip3 install matplotlib
 pip install mediapipe
 pip install aws-shell
 aws configure (need access key)
+pip install pyautogui
+pip install gTTs
 
 # AWS Commands
 aws rekognition create-collection --collection-id signLanguageRecognition_collection --region us-east-1
