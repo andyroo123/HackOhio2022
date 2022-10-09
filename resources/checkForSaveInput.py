@@ -19,3 +19,4 @@ def savePhoto(image):
     img_resized = cv2.imwrite(filename='./photos/saved_img-final.jpg', img=img_)
     print("Image saved!")
     moveFile()
+    print("Image Moved!")
