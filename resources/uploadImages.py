@@ -4,13 +4,13 @@ imageCount = 0
 
 def uploadSavedImg():
       s3 = boto3.resource('s3')
-      image = './photos/databasePhotos/testPhotos/saved_img.jpg','testImage' + str(imageCount) + '.jpg'
+      image = '.\photos\\testPhotos\saved_img.jpg','testImage' + str(imageCount) + '.jpg'
       print(image[0])
       print(image[1])
-      #file = open(image[0],'rb')
-      #object = s3.Object('test-signlanguage-image-bucket','images/'+ image[1])
-      #ret = object.put(Body=file,
-                      #  Metadata={'Name':image[1]})
+      file = open(image[0],'rb')
+      object = s3.Object('test-signlanguage-image-bucket','images/'+ image[1])
+      ret = object.put(Body=file,
+                        Metadata={'Name':image[1]})
 
 def main():
       s3 = boto3.resource('s3')
