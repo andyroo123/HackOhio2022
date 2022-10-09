@@ -29,7 +29,6 @@ while True:
             mpDraw.draw_landmarks(image, handLms, mpHands.HAND_CONNECTIONS)
         cv2.imshow("Output", image)
         checkForSaveInput(image, keyPressed) 
-        uploadSavedImg()
 
     # Check for quit input
     checkForQuitInput(cap, keyPressed)
