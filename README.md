@@ -8,6 +8,8 @@ pip install mediapipe
 pip install aws-shell
 pip install pyautogui
 aws configure (need access key)
+pip install pyautogui
+pip install gTTs
 
 # AWS Commands
 aws rekognition create-collection --collection-id signLanguageRecognition_collection --region us-east-1
